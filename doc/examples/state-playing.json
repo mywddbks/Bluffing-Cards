@@ -1,0 +1,158 @@
+{
+  "v": 1,
+  "type": "state",
+  "seq": 12,
+  "payload": {
+    "view": {
+      "protocol": 1,
+      "roomCode": "7K2M9Q",
+      "gameId": "g_20261105_1",
+      "maxPlayers": 3,
+      "phase": "playing",
+      "serverTime": "2026-11-05T06:00:10.000Z",
+      "hostId": "p_1",
+      "players": [
+        {
+          "playerId": "p_1",
+          "seat": 0,
+          "name": "张三",
+          "isAI": false,
+          "isHost": true,
+          "ready": true,
+          "connected": true,
+          "cardCount": 6,
+          "status": "active",
+          "rank": null,
+          "passCount": 0,
+          "isTurn": true
+        },
+        {
+          "playerId": "p_2",
+          "seat": 1,
+          "name": "李四",
+          "isAI": false,
+          "isHost": false,
+          "ready": true,
+          "connected": true,
+          "cardCount": 4,
+          "status": "active",
+          "rank": null,
+          "passCount": 0,
+          "isTurn": false
+        },
+        {
+          "playerId": "ai_1",
+          "seat": 2,
+          "name": "阿稳",
+          "isAI": true,
+          "isHost": false,
+          "ready": true,
+          "connected": true,
+          "cardCount": 6,
+          "status": "active",
+          "rank": null,
+          "passCount": 0,
+          "isTurn": false,
+          "persona": "steady"
+        }
+      ],
+      "you": {
+        "playerId": "p_1",
+        "seat": 0,
+        "isHost": true,
+        "hand": [
+          { "id": "S-7", "rank": "7", "suit": "S" },
+          { "id": "H-7", "rank": "7", "suit": "H" },
+          { "id": "D-K", "rank": "K", "suit": "D" },
+          { "id": "C-2", "rank": "2", "suit": "C" },
+          { "id": "J-SJ", "rank": "SJ", "suit": "J" },
+          { "id": "H-4", "rank": "4", "suit": "H" }
+        ],
+        "actions": {
+          "play": {
+            "allowed": true,
+            "claimMode": "fixed",
+            "allowedRanks": ["7"],
+            "fixedRank": "7",
+            "maxCards": 6,
+            "mustPlay": false
+          },
+          "challenge": {
+            "allowed": true,
+            "targetPlayerId": "p_2"
+          },
+          "pass": {
+            "allowed": true,
+            "kind": "first",
+            "special": false
+          }
+        }
+      },
+      "round": {
+        "number": 1,
+        "leaderId": "p_2",
+        "claimRank": "7",
+        "lastPlayerId": "p_2",
+        "lastPlay": {
+          "playerId": "p_2",
+          "seat": 1,
+          "count": 2,
+          "claimRank": "7",
+          "at": "2026-11-05T06:00:09.000Z"
+        },
+        "pileCount": 2,
+        "stage": "normal",
+        "activeCount": 3,
+        "confirmedCount": 0
+      },
+      "turn": { "playerId": "p_1", "seat": 0 },
+      "result": null,
+      "history": [
+        {
+          "id": "h_5",
+          "type": "gameStarted",
+          "at": "2026-11-05T06:00:05.000Z",
+          "gameId": "g_20261105_1",
+          "roomCode": "7K2M9Q",
+          "maxPlayers": 3,
+          "firstLeaderId": "p_2"
+        },
+        {
+          "id": "h_6",
+          "type": "roundStarted",
+          "at": "2026-11-05T06:00:05.000Z",
+          "number": 1,
+          "leaderId": "p_2",
+          "claimRank": null
+        },
+        {
+          "id": "h_7",
+          "type": "play",
+          "at": "2026-11-05T06:00:09.000Z",
+          "playerId": "p_2",
+          "seat": 1,
+          "name": "李四",
+          "count": 2,
+          "claimRank": "7",
+          "pileCount": 2,
+          "handCount": 4
+        }
+      ],
+      "historyTruncated": false
+    },
+    "events": [
+      {
+        "id": "h_7",
+        "type": "play",
+        "at": "2026-11-05T06:00:09.000Z",
+        "playerId": "p_2",
+        "seat": 1,
+        "name": "李四",
+        "count": 2,
+        "claimRank": "7",
+        "pileCount": 2,
+        "handCount": 4
+      }
+    ]
+  }
+}

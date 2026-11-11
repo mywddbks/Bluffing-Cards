@@ -66,3 +66,8 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+.probe/
+
+# Node.js tooling
+node_modules/
+npm-debug.log*
