@@ -1,0 +1,21 @@
+{
+  "request": {
+    "maxPlayers": 3,
+    "nickname": "张三"
+  },
+  "response": {
+    "protocol": 1,
+    "roomCode": "7K2M9Q",
+    "playerId": "p_1",
+    "playerToken": "opaque-token-1",
+    "wsPath": "/ws",
+    "room": {
+      "roomCode": "7K2M9Q",
+      "maxPlayers": 3,
+      "status": "waiting",
+      "playerCount": 1,
+      "hostName": "张三",
+      "aiCount": 0
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "request": {
+    "nickname": "李四"
+  },
+  "response": {
+    "protocol": 1,
+    "roomCode": "7K2M9Q",
+    "playerId": "p_2",
+    "playerToken": "opaque-token-2",
+    "wsPath": "/ws",
+    "room": {
+      "roomCode": "7K2M9Q",
+      "maxPlayers": 3,
+      "status": "waiting",
+      "playerCount": 2,
+      "hostName": "张三",
+      "aiCount": 0
+    }
+  }
+}

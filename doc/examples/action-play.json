@@ -1,0 +1,13 @@
+{
+  "v": 1,
+  "type": "play",
+  "actionId": "4f3c2d6e-7a8b-4c9d-8e1f-2a3b4c5d6e7f",
+  "baseSeq": 12,
+  "payload": {
+    "cards": ["S-7", "H-7"],
+    "claim": {
+      "rank": "7",
+      "count": 2
+    }
+  }
+}

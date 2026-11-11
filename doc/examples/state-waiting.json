@@ -1,0 +1,83 @@
+{
+  "v": 1,
+  "type": "state",
+  "seq": 4,
+  "payload": {
+    "view": {
+      "protocol": 1,
+      "roomCode": "7K2M9Q",
+      "gameId": null,
+      "maxPlayers": 3,
+      "phase": "waiting",
+      "serverTime": "2026-11-05T06:00:00.000Z",
+      "hostId": "p_1",
+      "players": [
+        {
+          "playerId": "p_1",
+          "seat": 0,
+          "name": "张三",
+          "isAI": false,
+          "isHost": true,
+          "ready": true,
+          "connected": true,
+          "cardCount": 0,
+          "status": "active",
+          "rank": null,
+          "passCount": 0,
+          "isTurn": false
+        },
+        {
+          "playerId": "p_2",
+          "seat": 1,
+          "name": "李四",
+          "isAI": false,
+          "isHost": false,
+          "ready": false,
+          "connected": true,
+          "cardCount": 0,
+          "status": "active",
+          "rank": null,
+          "passCount": 0,
+          "isTurn": false
+        }
+      ],
+      "you": {
+        "playerId": "p_1",
+        "seat": 0,
+        "isHost": true,
+        "hand": [],
+        "actions": {
+          "ready": { "allowed": true, "value": true },
+          "start": { "allowed": false, "reason": "还有玩家未准备" },
+          "addAI": { "allowed": true },
+          "removeAI": { "allowed": true, "playerIds": [] }
+        }
+      },
+      "round": null,
+      "turn": null,
+      "result": null,
+      "history": [
+        {
+          "id": "h_1",
+          "type": "playerJoined",
+          "at": "2026-11-05T06:00:00.000Z",
+          "playerId": "p_1",
+          "seat": 0,
+          "name": "张三",
+          "isAI": false
+        },
+        {
+          "id": "h_2",
+          "type": "playerJoined",
+          "at": "2026-11-05T06:00:01.000Z",
+          "playerId": "p_2",
+          "seat": 1,
+          "name": "李四",
+          "isAI": false
+        }
+      ],
+      "historyTruncated": false
+    },
+    "events": []
+  }
+}

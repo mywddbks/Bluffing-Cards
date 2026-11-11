@@ -1,0 +1,15 @@
+{
+  "id": "h_13",
+  "type": "reveal",
+  "at": "2026-11-05T06:00:20.000Z",
+  "challengerId": "p_1",
+  "targetPlayerId": "p_2",
+  "claimRank": "7",
+  "count": 2,
+  "truthful": false,
+  "cards": [
+    { "id": "S-7", "rank": "7", "suit": "S" },
+    { "id": "D-K", "rank": "K", "suit": "D" }
+  ],
+  "collectorId": "p_2"
+}
