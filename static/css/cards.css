@@ -1,0 +1,299 @@
+.playing-card {
+  --card-w-local: var(--card-w);
+  --card-h-local: var(--card-h);
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--card-w-local);
+  height: var(--card-h-local);
+  padding: 6px 7px;
+  border: 1px solid rgba(55, 45, 28, 0.28);
+  border-radius: var(--card-radius);
+  background:
+    radial-gradient(120% 85% at 15% 0%, #fffefb 0%, var(--paper-50) 46%, #f0e6d2 100%);
+  color: var(--ink-900);
+  box-shadow: var(--shadow-card);
+  text-align: left;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform var(--dur-mid) var(--ease-out), box-shadow var(--dur-mid) var(--ease-out), filter var(--dur-fast);
+}
+
+.playing-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.72),
+    inset 0 -16px 24px rgba(101, 80, 44, 0.06);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.playing-card.is-red {
+  color: var(--red-suit);
+}
+
+.playing-card.is-selected {
+  transform: translateY(-14px);
+  box-shadow:
+    0 0 0 2px var(--gold-bright),
+    0 14px 26px rgba(0, 0, 0, 0.42);
+}
+
+.playing-card.is-dimmed {
+  filter: saturate(0.65) brightness(0.8);
+}
+
+.playing-card:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
+}
+
+.card-corner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20px;
+  line-height: 0.9;
+  font-family: var(--font-card);
+  font-weight: 700;
+  z-index: 1;
+}
+
+.card-corner--tl {
+  align-self: flex-start;
+}
+
+.card-corner--br {
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
+
+.card-rank {
+  font-size: 15px;
+  letter-spacing: -0.03em;
+}
+
+.card-suit {
+  margin-top: 1px;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.card-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card-center-suit {
+  font-family: var(--font-card);
+  font-size: 31px;
+  line-height: 1;
+  opacity: 0.94;
+}
+
+.card-center-mark {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  opacity: 0.24;
+}
+
+.playing-card.is-joker {
+  background:
+    radial-gradient(120% 85% at 15% 0%, #fffefb 0%, #fbf6e9 48%, #efe0c5 100%);
+}
+
+.playing-card.is-joker .card-rank {
+  font-family: var(--font-card);
+  font-size: 12px;
+  letter-spacing: -0.05em;
+}
+
+.playing-card.is-joker .card-suit {
+  font-size: 9px;
+  letter-spacing: 0;
+}
+
+.joker-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-family: var(--font-card);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--red-suit);
+}
+
+.playing-card.is-joker.is-black-joker .joker-center {
+  color: var(--ink-900);
+}
+
+.joker-center small {
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  opacity: 0.55;
+}
+
+/* 牌背 */
+.playing-card.is-back {
+  padding: 0;
+  border-color: rgba(236, 214, 166, 0.4);
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 245, 219, 0.1), transparent 52%),
+    repeating-linear-gradient(45deg, rgba(249, 226, 177, 0.08) 0 1px, transparent 1px 7px),
+    linear-gradient(145deg, #7d2e2f 0%, #5c1e22 52%, #401518 100%);
+  box-shadow:
+    0 0 0 3px rgba(248, 236, 214, 0.88) inset,
+    0 0 0 4px rgba(92, 30, 34, 0.55) inset,
+    var(--shadow-card);
+}
+
+.playing-card.is-back::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(240, 210, 141, 0.5);
+  border-radius: 4px;
+  background:
+    linear-gradient(45deg, transparent 46%, rgba(240, 210, 141, 0.18) 47% 53%, transparent 54%),
+    linear-gradient(-45deg, transparent 46%, rgba(240, 210, 141, 0.18) 47% 53%, transparent 54%);
+  background-size: 14px 14px;
+}
+
+.playing-card.is-back::after {
+  inset: 50% auto auto 50%;
+  width: 28px;
+  height: 28px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(240, 210, 141, 0.58);
+  background: rgba(60, 18, 22, 0.66);
+  box-shadow: inset 0 0 0 3px rgba(240, 210, 141, 0.08);
+  content: "唬";
+  display: grid;
+  place-items: center;
+  color: var(--gold-bright);
+  font-family: var(--font-display);
+  font-size: 15px;
+  z-index: 3;
+}
+
+.playing-card.is-back .card-corner,
+.playing-card.is-back .card-center,
+.playing-card.is-back .joker-center {
+  display: none;
+}
+
+/* 手牌容器中的牌 */
+.hand-card {
+  position: relative;
+  width: var(--card-w);
+  height: var(--card-h);
+  margin-left: 0;
+  flex: 0 0 auto;
+  scroll-margin: 20px;
+}
+
+.hand-card + .hand-card {
+  margin-left: calc(var(--hand-step) - var(--card-w));
+}
+
+.hand-card.is-selected {
+  z-index: 5;
+}
+
+.hand-card:hover:not(.is-selected) {
+  transform: translateY(-7px);
+}
+
+.hand-card.is-unavailable {
+  pointer-events: none;
+  opacity: 0.52;
+  filter: saturate(0.5);
+}
+
+/* 首页展示牌 */
+.showcase-card {
+  --card-w: 88px;
+  --card-h: 126px;
+  --card-radius: 11px;
+  position: absolute;
+  transform-origin: 50% 130%;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.36);
+}
+
+.showcase-card .card-rank {
+  font-size: 20px;
+}
+
+.showcase-card .card-suit {
+  font-size: 17px;
+}
+
+.showcase-card .card-center-suit {
+  font-size: 44px;
+}
+
+.showcase-card.is-back::after {
+  width: 38px;
+  height: 38px;
+  font-size: 20px;
+}
+
+/* 微型牌背，用于座位信息 */
+.mini-cards {
+  display: flex;
+  align-items: center;
+  height: 28px;
+}
+
+.mini-card {
+  width: 19px;
+  height: 27px;
+  border-radius: 3px;
+  border: 1px solid rgba(240, 210, 141, 0.35);
+  background:
+    repeating-linear-gradient(45deg, rgba(249, 226, 177, 0.12) 0 1px, transparent 1px 5px),
+    linear-gradient(145deg, #743033, #45171a);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  margin-left: -6px;
+}
+
+.mini-card:first-child {
+  margin-left: 0;
+}
+
+/* 桌面中央倒扣牌堆 */
+.pile-stack {
+  position: relative;
+  width: 66px;
+  height: 92px;
+}
+
+.pile-stack .playing-card {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.pile-stack .playing-card:nth-child(1) { transform: rotate(-7deg) translate(-3px, 2px); }
+.pile-stack .playing-card:nth-child(2) { transform: rotate(4deg) translate(2px, -1px); }
+.pile-stack .playing-card:nth-child(3) { transform: rotate(-1deg) translate(0, 0); }

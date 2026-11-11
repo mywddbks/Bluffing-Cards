@@ -1,0 +1,530 @@
+/* 平板与中等宽度 */
+@media (max-width: 1024px) {
+  :root {
+    --card-w: 60px;
+    --card-h: 86px;
+    --header-h: 54px;
+  }
+
+  .home-main {
+    gap: 26px;
+  }
+
+  .home-art {
+    transform: scale(0.92);
+  }
+}
+
+/* 手机 */
+@media (max-width: 600px) {
+  :root {
+    --card-w: 48px;
+    --card-h: 69px;
+    --card-radius: 6px;
+    --hand-step: 22px;
+    --page-max: 100%;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .app-header {
+    width: calc(100% - 24px);
+  }
+
+  .brand {
+    font-size: 17px;
+  }
+
+  .brand-mark {
+    width: 27px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .room-chip {
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+
+  .room-chip strong {
+    font-size: 13px;
+  }
+
+  .home-main {
+    width: calc(100% - 28px);
+    padding-bottom: 30px;
+  }
+
+  .home-title {
+    font-size: clamp(62px, 19vw, 88px);
+    margin-top: 10px;
+  }
+
+  .home-subtitle {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .home-note {
+    font-size: 11px;
+  }
+
+  .home-actions {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 22px;
+  }
+
+  .home-actions .button {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .home-actions .button--primary {
+    order: -1;
+  }
+
+  .home-secondary {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  .nickname-field {
+    justify-content: space-between;
+  }
+
+  .nickname-field input {
+    flex: 1;
+    width: auto;
+    max-width: 200px;
+  }
+
+  .home-art {
+    min-height: 250px;
+    margin: -8px 0 -24px;
+    transform: scale(0.72);
+  }
+
+  .home-card-fan {
+    width: 300px;
+    height: 250px;
+  }
+
+  .home-card-fan .showcase-card:nth-child(1) { left: 44px; top: 88px; }
+  .home-card-fan .showcase-card:nth-child(2) { left: 92px; top: 64px; }
+  .home-card-fan .showcase-card:nth-child(3) { left: 144px; top: 54px; }
+  .home-card-fan .showcase-card:nth-child(4) { left: 194px; top: 68px; }
+  .home-card-fan .showcase-card:nth-child(5) { left: 230px; top: 98px; }
+
+  .home-footer {
+    width: calc(100% - 28px);
+    font-size: 10px;
+    padding-bottom: 18px;
+  }
+
+  .lobby-main {
+    width: calc(100% - 24px);
+    padding-bottom: 30px;
+  }
+
+  .lobby-panel {
+    margin-top: 18px;
+    padding: 20px 16px;
+  }
+
+  .lobby-heading {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .seat-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 20px 0 14px;
+  }
+
+  .lobby-seat {
+    min-height: 84px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+  }
+
+  .lobby-seat.is-empty {
+    min-height: 68px;
+  }
+
+  .lobby-seat-head {
+    min-width: 0;
+  }
+
+  .lobby-seat-actions {
+    justify-content: flex-end;
+  }
+
+  .lobby-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lobby-actions .button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .lobby-actions .button--primary {
+    margin-left: 0;
+    order: -1;
+  }
+
+  .card-rank {
+    font-size: 12px;
+  }
+
+  .card-suit {
+    font-size: 11px;
+  }
+
+  .card-center-suit {
+    font-size: 23px;
+  }
+
+  .card-corner {
+    width: 16px;
+  }
+
+  .playing-card {
+    padding: 4px 5px;
+  }
+
+  .playing-card.is-back::after {
+    width: 21px;
+    height: 21px;
+    font-size: 12px;
+  }
+
+  .showcase-card {
+    --card-w: 74px;
+    --card-h: 106px;
+  }
+
+  .showcase-card .card-rank {
+    font-size: 17px;
+  }
+
+  .showcase-card .card-suit {
+    font-size: 14px;
+  }
+
+  .showcase-card .card-center-suit {
+    font-size: 36px;
+  }
+
+  .table-screen {
+    min-height: 500px;
+    overflow-x: clip;
+  }
+
+  .table-shell {
+    width: 100%;
+    min-width: 0;
+    padding: 6px 10px 0;
+  }
+
+  .table-topbar {
+    min-height: 38px;
+    gap: 6px;
+  }
+
+  .table-meta {
+    gap: 5px;
+    white-space: nowrap;
+  }
+
+  .table-tools {
+    flex-shrink: 0;
+  }
+
+  .table-meta {
+    font-size: 10px;
+  }
+
+  .table-meta strong {
+    font-size: 11px;
+  }
+
+  .table-tools .button {
+    min-height: 30px;
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .table-tools .icon-button {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 15px;
+  }
+
+  .round-claim {
+    font-size: 9px;
+    padding: 3px 9px;
+    gap: 6px;
+  }
+
+  .round-claim__rank {
+    min-width: 20px;
+    height: 20px;
+    font-size: 13px;
+  }
+
+  .center-board {
+    gap: 10px;
+  }
+
+  .pile-stack {
+    width: 54px;
+    height: 76px;
+  }
+
+  .pile-stack .playing-card {
+    --card-w: 54px;
+    --card-h: 76px;
+  }
+
+  .playing-card.is-back::before {
+    inset: 5px;
+  }
+
+  .last-play {
+    min-width: 96px;
+  }
+
+  .you-strip {
+    min-height: 30px;
+  }
+
+  .you-strip__name {
+    font-size: 11px;
+  }
+
+  .you-strip__meta {
+    font-size: 9px;
+  }
+
+  .selection-readout {
+    padding: 2px 7px;
+    font-size: 9px;
+  }
+
+  .hand-scroller {
+    padding: 14px 2px 2px;
+  }
+
+  .hand-card + .hand-card {
+    margin-left: calc(var(--hand-step) - var(--card-w));
+  }
+
+  .hand-toolbar {
+    gap: 5px;
+    min-height: 23px;
+  }
+
+  .rank-key {
+    min-width: 21px;
+    height: 22px;
+    font-size: 11px;
+  }
+
+  .rank-picker__label,
+  .hand-toolbar__label {
+    font-size: 9px;
+  }
+
+  .action-dock {
+    padding-top: 6px;
+  }
+
+  .action-buttons {
+    gap: 5px;
+  }
+
+  .action-buttons .button {
+    min-height: 42px;
+    border-radius: 10px;
+  }
+
+  .dock-helper {
+    font-size: 9px;
+    min-height: 14px;
+  }
+
+  .history-drawer {
+    width: 100%;
+  }
+
+  .toast-root {
+    bottom: calc(8px + env(safe-area-inset-bottom));
+  }
+
+  .result-title {
+    font-size: 46px;
+  }
+
+  .result-subtitle {
+    font-size: 12px;
+  }
+
+  .modal {
+    width: 100%;
+  }
+
+  .button {
+    min-height: 40px;
+  }
+}
+
+/* 极窄屏幕 */
+@media (max-width: 380px) {
+  :root {
+    --card-w: 44px;
+    --card-h: 63px;
+    --hand-step: 19px;
+  }
+
+  .home-title {
+    font-size: 60px;
+  }
+
+  .action-buttons {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .action-buttons .button:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .seat {
+    width: 47vw;
+    padding: 6px;
+  }
+
+  .seat-avatar {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 12px;
+  }
+
+  .seat-name {
+    font-size: 10px;
+  }
+
+  .seat-meta {
+    font-size: 8px;
+    gap: 3px;
+  }
+
+  .mini-cards {
+    display: none;
+  }
+
+  .opponents {
+    gap: 5px;
+  }
+
+  .last-play {
+    min-width: 84px;
+    padding: 5px;
+  }
+}
+
+/* 横屏手机：压缩纵向空间 */
+@media (max-height: 600px) and (orientation: landscape) {
+  .table-shell {
+    padding-top: 2px;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+  }
+
+  .table-topbar {
+    min-height: 32px;
+  }
+
+  .opponents {
+    min-height: 72px;
+    padding-bottom: 2px;
+  }
+
+  .seat {
+    padding: 5px 8px;
+  }
+
+  .seat-avatar {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 12px;
+  }
+
+  .seat-meta {
+    margin-top: 2px;
+  }
+
+  .center-board {
+    min-height: 92px;
+  }
+
+  .pile-stack {
+    width: 44px;
+    height: 62px;
+  }
+
+  .pile-stack .playing-card {
+    --card-w: 44px;
+    --card-h: 62px;
+  }
+
+  .hand-scroller {
+    padding-top: 8px;
+  }
+
+  .hand-toolbar {
+    position: absolute;
+    right: 6px;
+    bottom: 2px;
+    background: rgba(5, 24, 19, 0.7);
+    border-radius: var(--radius-sm);
+    padding: 2px 4px;
+  }
+
+  .action-buttons .button {
+    min-height: 38px;
+  }
+
+  .you-strip {
+    min-height: 26px;
+  }
+}
+
+/* 大屏略增大牌面 */
+@media (min-width: 1440px) {
+  :root {
+    --card-w: 68px;
+    --card-h: 98px;
+    --hand-step: 30px;
+  }
+
+  .table-shell {
+    width: min(1240px, 100%);
+  }
+
+  .seat {
+    width: 270px;
+  }
+}
